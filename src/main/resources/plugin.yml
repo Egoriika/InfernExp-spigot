@@ -1,0 +1,6 @@
+name: InfernExp
+version: '${project.version}'
+main: org.infernworld.infernexp.InfernExp
+api-version: '1.16'
+commands:
+  exp: {}

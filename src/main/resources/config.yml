@@ -1,0 +1,22 @@
+# Плагин "InfernExp" Версия плагина: 1.0v
+# Разработчик (По всем вопросам) -> Егор Татаркин (Ник в майне: EG_SH_NOT) vk.com/egortatarkin : @theegorhick (Telegram)
+#
+# Канал Великого Егшота -> t.me/egashotina
+
+item: # Настройка ItemStack
+  material: EXPERIENCE_BOTTLE # Материал пузыря
+  name: "&#5AFB08П&#63FB1Dу&#6CFB32з&#76FC47ы&#7FFC5Cр&#88FC72е&#91FC87к &#A4FDB1с %lvl LVL" # Название, %lvl - это плейсхолдер локальный для показа кол-во exp
+  lore:
+    - " "
+    - "&#5AFB08▶&f Пузырек содержит &#5AFB08%lvl LVL опыта"
+    - " &8&o(ПКМ - Чтоб получить опыт)"
+
+settings:
+  sound-exp: ENTITY_ILLUSIONER_CAST_SPELL
+  sound-no: BLOCK_RESPAWN_ANCHOR_DEPLETE
+
+message:
+  no-exp: "&#FD0000▶&f Недостаточно &#FD0000лвл опыта&f для обмена!"
+  reload: "&#08FB18▶&f Плагин перезагружен!"
+  no-perms: "&#FD0000▶&f Нет &#FD0000прав!"
+  no-botlle: "&#FD0000▶&f У вас &#FD0000нет&f пустого &#FD0000пузырька!"

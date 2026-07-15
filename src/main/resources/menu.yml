@@ -1,0 +1,51 @@
+# Плагин "InfernExp" Версия плагина: 1.0v
+# Разработчик (По всем вопросам) -> Егор Татаркин (Ник в майне: EG_SH_NOT) vk.com/egortatarkin : @theegorhick (Telegram)
+#
+# Канал Великого Егшота -> t.me/egashotina
+
+title: "Обменник опыта" # Название меню
+size: 54 # Ну думаю и так понятно что это (размер инв)
+items: # Это не менять это секция
+  exp-15: # Название секции (можно любое)
+    material: EXPERIENCE_BOTTLE # Материал
+    slot: 20 # Слот
+    exp: 15 # Это кол-во exp для обмена
+    name: "&FОбменять на &#5AFB08П&#63FB1Dу&#6CFB32з&#76FC47ы&#7FFC5Cр&#88FC72е&#91FC87к &#A4FDB1с 15 LVL опыта" # Название
+    lore: # Описание
+      - " "
+      - "&FПри клике вы получите &#5AFB08бутылек с 15 лвл опыта "
+  exp-30:
+    material: EXPERIENCE_BOTTLE
+    slot: 22
+    exp: 30
+    name: "&FОбменять на  &#5AFB08П&#63FB1Dу&#6CFB32з&#76FC47ы&#7FFC5Cр&#88FC72е&#91FC87к &#A4FDB1с 30 LVL опыта"
+    lore:
+      - " "
+      - "&FПри клике вы получите &#5AFB08бутылек с 30 лвл опыта "
+  exp-60:
+    material: EXPERIENCE_BOTTLE
+    slot: 24
+    exp: 60
+    name: "&FОбменять на  &#5AFB08П&#63FB1Dу&#6CFB32з&#76FC47ы&#7FFC5Cр&#88FC72е&#91FC87к &#A4FDB1с 60 LVL опыта"
+    lore:
+      - " "
+      - "&FПри клике вы получите &#5AFB08бутылек с 60 лвл опыта "
+  dekor:
+    material: PAPER
+    slot:
+      - 4
+    name: "&fОписание:"
+    lore:
+      - "&fЭто обменник опыта!"
+  dekor-1:
+    name: " "
+    material: MAGENTA_STAINED_GLASS_PANE
+    slot:
+      - 1
+      - 7
+      - 9
+      - 17
+      - 36
+      - 46
+      - 44
+      - 52
