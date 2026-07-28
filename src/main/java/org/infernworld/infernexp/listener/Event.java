@@ -50,7 +50,7 @@ public class Event implements Listener {
         }
 
         val slot = e.getSlot();
-        gui.onInvClick(player, slot);
+        gui.onInvClick(player,slot, clickedInventory);
     }
 
     @EventHandler

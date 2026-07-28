@@ -45,7 +45,7 @@ public class Commands implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            player.openInventory(new Gui(plugin).getInventory());
+            new Gui(plugin).createInventory(player);
             return true;
         }
 
