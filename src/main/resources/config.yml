@@ -12,6 +12,7 @@ item: # Настройка ItemStack
     - " &8&o(ПКМ - Чтоб получить опыт)"
 
 settings:
+  vanilla: false # Если true - ванильный счет
   sound-exp: ENTITY_ILLUSIONER_CAST_SPELL
   sound-no: BLOCK_RESPAWN_ANCHOR_DEPLETE
 

@@ -1,5 +1,6 @@
 package org.infernworld.infernexp.inv;
 
+import lombok.Getter;
 import lombok.val;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
 public class Gui {
     private final InfernExp plugin;
     private final Menu menu;

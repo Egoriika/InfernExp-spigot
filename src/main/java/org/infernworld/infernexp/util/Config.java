@@ -23,6 +23,7 @@ public class Config {
             sound,
             soundNo;
     private Sound sounds, soundsNo;
+    private boolean vanila;
     private List<String> lore = new ArrayList<>();
 
     public Config(InfernExp plugin) {
@@ -47,6 +48,7 @@ public class Config {
         this.reload = Color.colorize(msg.getString("reload"));
         this.sound = settings.getString("sound-exp");
         this.soundNo = settings.getString("sound-no");
+        this.vanila = settings.getBoolean("vanilla");
         if (this.sound != null) {
             try {
                 this.sounds = Sound.valueOf(this.sound);

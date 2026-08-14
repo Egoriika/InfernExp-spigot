@@ -17,6 +17,7 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.infernworld.infernexp.InfernExp;
 import org.infernworld.infernexp.inv.Gui;
+import org.infernworld.infernexp.manager.ExpManager;
 import org.infernworld.infernexp.util.Menu;
 
 public class Event implements Listener {
@@ -67,8 +68,13 @@ public class Event implements Listener {
             event.setExperience(0);
             Location loc = bottle.getLocation();
             ExperienceOrb orb = loc.getWorld().spawn(loc, ExperienceOrb.class);
-            orb.setExperience(lvl);
-            orb.getPersistentDataContainer().set(plugin.getKey(), PersistentDataType.INTEGER, lvl);
+            if (gui.getCfg().isVanila()) {
+                orb.setExperience(gui.getEm().calculateExp(lvl));
+                orb.getPersistentDataContainer().set(plugin.getKey(), PersistentDataType.INTEGER, lvl);
+            } else {
+                orb.setExperience(lvl);
+                orb.getPersistentDataContainer().set(plugin.getKey(), PersistentDataType.INTEGER, lvl);
+            }
         }
     }
 
@@ -79,9 +85,13 @@ public class Event implements Listener {
         if (container.has(plugin.getKey(), PersistentDataType.INTEGER)) {
             int lvl = container.get(plugin.getKey(), PersistentDataType.INTEGER);
             event.setCancelled(true);
-            exp .remove();
+            exp.remove();
             Player player = event.getPlayer();
-            player.setLevel(player.getLevel() + lvl);
+            if (gui.getCfg().isVanila()) {
+                player.giveExp(gui.getEm().calculateExp(lvl));
+            } else {
+                player.setLevel(player.getLevel() + lvl);
+            }
         }
     }
 }

@@ -57,4 +57,10 @@ public class ExpManager {
         if (player.hasPermission("infernexp.give")) return;
         player.setLevel(player.getLevel() - exp);
     }
+
+    public int calculateExp(int level) {
+        if (level <= 15) return level * level + 6 * level;
+        if (level <= 30) return (int) (2.5D * level * level - 40.5D * level + 360);
+        return (int) (4.5D * level * level - 162.5D * level + 2220);
+    }
 }
